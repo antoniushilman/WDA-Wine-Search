@@ -26,7 +26,7 @@
         <table border="0" style="margin:auto; padding:15px">
             <tr colspan="3">
                 <th style="font-size: 28px">
-                    Welcome to Antonius Wine Search
+                    Welcome to Wine Search
                 </th>
             </tr>
             
