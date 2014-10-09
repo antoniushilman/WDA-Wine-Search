@@ -3,7 +3,7 @@
    $hostName = "localhost";
    $databaseName = "winestore";
    $username = "root";
-   $password = "gg.com";
+   $password = "gg.com"
 
    function showerror()
    {
