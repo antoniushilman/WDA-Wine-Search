@@ -8,11 +8,10 @@
 <body>
 	
 <?php
-	
 	set_include_path('C:/wamp/bin/php/php5.5.12/pear');
 	require_once "HTML/Template/IT.php";
 	
-	require 'db.inc';
+	require_once "DB.php";
 	
 	//Obtaining user input
 	$wine = $_GET['winename'];
@@ -102,25 +101,24 @@
 		inventory.on_hand
 		
 		HAVING (TotalCustomer >= '".$customer."')
-		";
-	
-		// Connect to the MySQL server		
-		if (!($connection = @ mysql_connect($hostName, $username, $password)))
-			die("Cannot connect");
-
-		if (!(mysql_select_db($databaseName, $connection)))
-			showerror();
-
-		if (!($result = @ mysql_query ($query, $connection)))
-			showerror();
+		";		
 		
-	
 		$template = new HTML_Template_IT(".");
 		
 		// $template->loadTemplatefile("ex2_6.tpl", true, true);
-		
-		$template->loadTemplatefile("winesearchtemplate.tpl", true, true);		
+		$template->loadTemplatefile("searchresulttemplate2.tpl", true, true);
 
+		$username = "root";
+		$password = "gg.com";
+		$hostname = "localhost";
+		$dbname = "winestore";
+		
+		$db = "mysql://{$username}:{$password}@{$hostname}/{$dbname}";
+		
+		$connection =@ DB::connect($db);
+		
+		$result = @$connection->query($query);		
+			
 		if($yearstart > $yearend || $minimalprice > $maximalprice)
 		{
 			$template->setCurrentBlock("VALIDATION");
@@ -128,11 +126,10 @@
 				$template->setVariable("ERRORMSG1", "I am sorry");
 				$template->setVariable("ERRORMSG2", "Please ensure your minimum year or price is lesser than the maximum");
 				
-			$template->parseCurrentBlock();
-				
+			$template->parseCurrentBlock();				
 		}
 		
-		else if(mysql_num_rows($result)==0)
+		else if(($result->numRows())==0)
 		{
 			$template->setCurrentBlock("NOSEARCHRESULT");
 			
@@ -142,8 +139,7 @@
 		}
 		
 		else
-		{
-			
+		{			
 			$template->setCurrentBlock("TABLEHEADER");
 			
 				$template->setVariable("H1", "Wine Name");
@@ -157,7 +153,7 @@
 				
 			$template->parseCurrentBlock();
 			
-			while ($row = mysql_fetch_array($result))
+			while ($row = $result->fetchRow(DB_FETCHMODE_ASSOC))
 			{
 				$template->setCurrentBlock("SEARCHRESULT");
 				
