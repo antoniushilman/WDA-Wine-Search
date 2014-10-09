@@ -51,16 +51,16 @@
 		
 		<!-- BEGIN VALIDATION -->
 			<tr>
-				<td>{ERRORMSG1}</td>
+				<td colspan="9">{ERRORMSG1}</td>
 			</tr>
 			<tr>
-				<td>{ERRORMSG2}</td>
+				<td colspan="9">{ERRORMSG2}</td>
 			</tr>
 		<!-- END VALIDATION -->
 		
 		<!-- BEGIN NOSEARCHRESULT -->
 		<tr>
-			<td> {NOSEARCH} </td>
+			<td colspan="9"> {NOSEARCH} </td>
 		</tr>
 		<!-- END NOSEARCHRESULT -->
 

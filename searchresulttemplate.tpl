@@ -17,26 +17,32 @@
 	th, td
 	{
 		text-align: center;
-		padding: 15px;
-		margin:auto;
+		padding: 10px;
 	}
 	</style>
 </head>
 <body>
 <table>
 		<tr>
-			<th style="font-size:32px; text-align:left" colspan="9" align="center">
+			<th rowspan="2"  align="center">
 				<img src="logo.png" alt="Wine Store" 
 				style="float:left; 
 				width:120px;
 				height:120px;"
 				/>
-					Wine Store Search
-				<p style="font-size:10px">
-					Created by Antonius Hilman
-				</p>
 			</th>
+			<th style="font-size:32px;" align="left">
+				<br/>
+				Wine Store Search
+			</th>
+			
+			<tr>
+				<td style="font-size:10px">
+					Created by Antonius Hilman
+				</td>
+			</tr>
 		</tr>
+		
 		<tr>
 			<th colspan="9" style="text-align:center; font-size:20px">
 				Search Result
@@ -45,16 +51,16 @@
 		
 		<!-- BEGIN VALIDATION -->
 			<tr>
-				<td colspan ="2" >{ERRORMSG1}</td>
+				<td colspan="9">{ERRORMSG1}</td>
 			</tr>
 			<tr>
-				<td colspan="2">{ERRORMSG2}</td>
+				<td colspan="9">{ERRORMSG2}</td>
 			</tr>
 		<!-- END VALIDATION -->
 		
 		<!-- BEGIN NOSEARCHRESULT -->
 		<tr>
-			<td> {NOSEARCH} </td>
+			<td colspan="9"> {NOSEARCH} </td>
 		</tr>
 		<!-- END NOSEARCHRESULT -->
 

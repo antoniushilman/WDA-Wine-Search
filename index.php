@@ -8,6 +8,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
         <style>
+            table
+            {
+                border: 1px solid black;
+		padding: 5px;
+		align: center;
+		margin: auto;
+            }
             tr, th
             {
                 padding:15px;
@@ -19,7 +26,7 @@
         <table border="0" style="margin:auto; padding:15px">
             <tr colspan="3">
                 <th style="font-size: 28px">
-                    Welcome to wine search
+                    Welcome to Antonius Wine Search
                 </th>
             </tr>
             
