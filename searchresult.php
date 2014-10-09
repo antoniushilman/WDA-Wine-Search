@@ -4,6 +4,7 @@
 <html>
 <head>
 	<title>Search Result</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<style>
 	table
 	{
@@ -15,9 +16,8 @@
 	
 	th, td
 	{
-		text-align: center;
+                text-align:center;
 		padding: 15px;
-		margin:auto;
 	}
 	</style>
 </head>
@@ -135,7 +135,6 @@
 	function displayvalidationerror()
 	{
 		print '<table>
-	
 		<tr>
 			<th rowspan="2"  align="center">
 				<img src="logo.png" alt="Wine Store" 
@@ -146,29 +145,30 @@
 			</th>
 			<th style="font-size:32px">
 				<br/>
-				Wine Store Search Result
+				Wine Store
 			</th>
 			
 			<tr>
-				<td style="font-size:10px">
+				<td style="font-size:10px;">
 					Created by Antonius Hilman
 				</td>
 			</tr>
 		</tr>
 		
-		<tr>
-			<th colspan="2" style="text-align:center; font-size:20px">
+                    <tr>
+			<th colspan="2" style="font-size:20px">
 				Search Result
 			</th>
-		</tr>
-			<tr>
-			<td colspan ="2" >I am sorry</td>
-			</tr>
-			<tr>
+                    </tr>
+		
+                    <tr>
+			<td colspan ="2">I am sorry</td>
+                    </tr>
+		
+                    <tr>
 			<td colspan="2"> Please ensure your minimum year or price is lesser than the maximum</td>
-			</tr>
-		</tr>
-			</table>';
+                    </tr>
+            </table>';
 	}
 	
 	//showing the wines result in tables that is correct
@@ -179,27 +179,33 @@
 		{
 			print '<table>
 			<tr>
-			<th style="font-size:32px; text-align:left" colspan="9" align="center">
+			<th rowspan="2"  align="center">
 				<img src="logo.png" alt="Wine Store" 
 				style="float:left; 
 				width:120px;
 				height:120px;"
 				/>
-					Wine Store Search
-				<p style="font-size:10px">
-					Created by Antonius Hilman
-				</p>
 			</th>
+			<th style="font-size:32px">
+				<br/>
+				Wine Store
+			</th>
+			
+			<tr>
+				<td style="font-size:10px">
+					Created by Antonius Hilman
+				</td>
+			</tr>
 			</tr>
 			
 			<tr>
-			<th colspan="2" style="text-align:center; font-size:20px">
+			<th colspan="2" style="font-size:20px">
 				Search Result
 			</th>
 			</tr>
 			
 			<tr>
-				<td>
+				<td colspan="2">
 					No search found
 				</td>
 			</tr>
@@ -212,20 +218,26 @@
 		print '<table>
 	
 		<tr>
-			<th style="font-size:32px; text-align:left" colspan="9" align="center">
+			<th rowspan="2"  align="center">
 				<img src="logo.png" alt="Wine Store" 
 				style="float:left; 
 				width:120px;
 				height:120px;"
 				/>
-					Wine Store Search
-				<p style="font-size:10px">
-					Created by Antonius Hilman
-				</p>
 			</th>
-		</tr>
+			<th style="font-size:32px">
+				<br/>
+				Wine Store
+			</th>
+			
+			<tr>
+				<td style="font-size:10px">
+					Created by Antonius Hilman
+				</td>
+			</tr>
+			</tr>
 		<tr>
-			<th colspan="9" style="text-align:center; font-size:20px">
+			<th colspan="9" style="font-size:20px">
 				Search Result
 			</th>
 		</tr>

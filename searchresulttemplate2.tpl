@@ -16,8 +16,8 @@
 	
 	th, td
 	{
-		text-align: center;
-		padding: 10px;
+                text-align:center;
+		padding: 15px;
 	}
 	</style>
 </head>
@@ -33,7 +33,7 @@
 			</th>
 			<th style="font-size:32px;" align="left">
 				<br/>
-				Wine Store Search
+				Wine Store
 			</th>
 			
 			<tr>
@@ -44,7 +44,7 @@
 		</tr>
 		
 		<tr>
-			<th colspan="9" style="text-align:center; font-size:20px">
+			<th colspan="9" style="font-size:20px">
 				Search Result
 			</th>
 		</tr>

@@ -36,7 +36,7 @@
 			</th>
 			<th style="font-size:32px;" align="left">
 				<br/>
-				Wine Store Search
+				Wine Store
 			</th>
 			
 			<tr>

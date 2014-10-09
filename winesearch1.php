@@ -19,7 +19,7 @@
 		padding: 10px;
 	}
 	</style>
-	
+        
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 	
 </head>
@@ -37,7 +37,7 @@
 			</th>
 			<th style="font-size:32px;" align="left">
 				<br/>
-				Wine Store Search
+				Wine Store
 			</th>
 			
 			<tr>
